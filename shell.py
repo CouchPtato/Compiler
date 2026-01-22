@@ -1,4 +1,5 @@
 from lexer import run
+from parser import Parser
 
 while True:
     text = input(">>> ")
@@ -11,4 +12,6 @@ while True:
     if error:
         print("ERROR:", error)
     else:
-        print(tokens)
+        parser = Parser(tokens)
+        ast = parser.parse()
+        print(ast)

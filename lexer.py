@@ -65,8 +65,6 @@ class Lexer:
 
         return Token(t_int, int(num_str))
 
-# RUN FUNCTION
-
 def run(text):
     lexer = Lexer(text)
     tokens, error = lexer.make_tokens()
